@@ -51,7 +51,7 @@ export default function Home() {
           transition={{ delay: 0.4, duration: 0.8 }}
         >
           <p className="text-[#e6f1ff] text-center">
-            "I&apos;m a data professional passionate about turning numbers into actionable insights. 
+            I&apos;m a data professional passionate about turning numbers into actionable insights. 
             With expertise in analytics, accounting, and customer experience, I bridge the gap 
             between data and business decisions.
           </p>
