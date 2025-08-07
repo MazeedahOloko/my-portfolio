@@ -29,7 +29,7 @@ export default function Home() {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-5xl font-bold text-[#64ffda]">
-            Hi, I'm Mazeedah O
+            Hi, I&apos;m Mazeedah O
           </h1>
         </motion.div>
 
@@ -51,7 +51,7 @@ export default function Home() {
           transition={{ delay: 0.4, duration: 0.8 }}
         >
           <p className="text-[#e6f1ff] text-center">
-            I'm a data professional passionate about turning numbers into actionable insights. 
+            "I&apos;m a data professional passionate about turning numbers into actionable insights. 
             With expertise in analytics, accounting, and customer experience, I bridge the gap 
             between data and business decisions.
           </p>
