@@ -12,7 +12,6 @@ export default function Home() {
       <nav className="fixed w-full flex justify-between items-center p-6 z-50">
         <div className="text-[#64ffda] font-bold text-xl">Mazeedah O</div>
         <div className="flex gap-6">
-          <Link href="#home" className="text-[#e6f1ff] hover:text-[#64ffda]">Home</Link>
           <Link href="#about" className="text-[#e6f1ff] hover:text-[#64ffda]">About</Link>
           <Link href="#skills" className="text-[#e6f1ff] hover:text-[#64ffda]">Skills</Link>
           <Link href="#projects" className="text-[#e6f1ff] hover:text-[#64ffda]">Projects</Link>
