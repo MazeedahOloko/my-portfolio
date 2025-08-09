@@ -7,7 +7,6 @@ export default function MobileMenu() {
 
   return (
     <div className="relative">
-      {/* Only shows the hamburger icon */}
       <button 
         onClick={() => setIsOpen(!isOpen)}
         className="text-[#64ffda] text-2xl"
@@ -16,9 +15,8 @@ export default function MobileMenu() {
         ☰
       </button>
       
-      {/* Mobile dropdown menu */}
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-48 bg-[#112240] rounded-md shadow-lg z-50 border border-[#64ffda]/20">
+        <div className="absolute left-0 mt-2 w-48 bg-[#112240] rounded-md shadow-lg z-50 border border-[#64ffda]/20">
           <Link href="#about" onClick={() => setIsOpen(false)} className="block px-4 py-3 text-[#e6f1ff] hover:bg-[#64ffda]/10">About</Link>
           <Link href="#skills" onClick={() => setIsOpen(false)} className="block px-4 py-3 text-[#e6f1ff] hover:bg-[#64ffda]/10">Skills</Link>
           <Link href="#projects" onClick={() => setIsOpen(false)} className="block px-4 py-3 text-[#e6f1ff] hover:bg-[#64ffda]/10">Projects</Link>
