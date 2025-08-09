@@ -1,5 +1,4 @@
-'use client'; // Must be first line
-
+'use client';
 import { useState } from 'react';
 import Link from 'next/link';
 
@@ -7,21 +6,53 @@ export default function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="md:hidden relative">
+    <div className="relative">
+      {/* Hamburger Button - Only icon (no name) */}
       <button 
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 text-[#64ffda] font-bold text-xl p-2"
+        className="text-[#64ffda] text-2xl p-1"
+        aria-label="Toggle menu"
       >
-        <span>☰</span>
-        <span>Mazeedah O</span>
+        ☰
       </button>
       
+      {/* Dropdown Menu */}
       {isOpen && (
-          <div className="absolute left-0 mt-2 w-48 bg-[#112240] rounded-md shadow-lg z-50 border border-[#64ffda]/20">
-          <Link href="#about" onClick={() => setIsOpen(false)} className="block px-4 py-2 text-[#e6f1ff] hover:bg-[#64ffda]/10">About</Link>
-          <Link href="#skills" onClick={() => setIsOpen(false)} className="block px-4 py-2 text-[#e6f1ff] hover:bg-[#64ffda]/10">Skills</Link>
-          <Link href="#projects" onClick={() => setIsOpen(false)} className="block px-4 py-2 text-[#e6f1ff] hover:bg-[#64ffda]/10">Projects</Link>
-          <Link href="#contact" onClick={() => setIsOpen(false)} className="block px-4 py-2 text-[#e6f1ff] hover:bg-[#64ffda]/10">Contact</Link>
+        <div className="absolute right-0 mt-2 w-56 bg-[#112240] rounded-md shadow-xl z-50 border border-[#64ffda]/30 backdrop-blur-sm">
+          {/* Menu Header with Name */}
+          <div className="px-4 py-3 border-b border-[#64ffda]/20">
+            <span className="font-bold text-[#64ffda]">Mazeedah O</span>
+          </div>
+          
+          {/* Menu Items */}
+          <Link 
+            href="#about" 
+            onClick={() => setIsOpen(false)}
+            className="block px-4 py-3 text-[#e6f1ff] hover:bg-[#64ffda]/10 hover:text-[#64ffda] transition-all"
+          >
+            About
+          </Link>
+          <Link 
+            href="#skills" 
+            onClick={() => setIsOpen(false)}
+            className="block px-4 py-3 text-[#e6f1ff] hover:bg-[#64ffda]/10 hover:text-[#64ffda] transition-all"
+          >
+            Skills
+          </Link>
+          <Link 
+            href="#projects" 
+            onClick={() => setIsOpen(false)}
+            className="block px-4 py-3 text-[#e6f1ff] hover:bg-[#64ffda]/10 hover:text-[#64ffda] transition-all"
+          >
+            Projects
+          </Link>
+          <Link 
+            href="#contact" 
+            onClick={() => setIsOpen(false)}
+            className="block px-4 py-3 text-[#e6f1ff] hover:bg-[#64ffda]/10 hover:text-[#64ffda] transition-all rounded-b-md"
+          >
+            Contact
+          </Link>
         </div>
       )}
     </div>
