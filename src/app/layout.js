@@ -25,31 +25,29 @@ export default function RootLayout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {/* Fixed Header */}
         <header className="fixed w-full flex justify-between items-center p-6 z-50 bg-[#0a192f]">
-          {/* Left side - Name (desktop) / Hamburger (mobile) */}
+          {/* Left side - Only shows name (always visible) */}
+          <div className="text-[#64ffda] font-bold text-xl">
+            Mazeedah O
+          </div>
+
+          {/* Right side - Desktop nav OR mobile menu (never both) */}
           <div className="flex items-center">
-            {/* Show name on desktop */}
-            <span className="hidden md:block text-[#64ffda] font-bold text-xl">
-              Mazeedah O
-            </span>
-            
-            {/* Show hamburger on mobile */}
+            {/* Desktop Navigation (hidden on mobile) */}
+            <nav className="hidden md:flex gap-6 mr-4">
+              <Link href="#about" className="text-[#e6f1ff] hover:text-[#64ffda] transition-colors">About</Link>
+              <Link href="#skills" className="text-[#e6f1ff] hover:text-[#64ffda] transition-colors">Skills</Link>
+              <Link href="#projects" className="text-[#e6f1ff] hover:text-[#64ffda] transition-colors">Projects</Link>
+              <Link href="#contact" className="text-[#e6f1ff] hover:text-[#64ffda] transition-colors">Contact</Link>
+            </nav>
+
+            {/* Mobile Menu Button (hidden on desktop) */}
             <div className="md:hidden">
               <MobileMenu />
             </div>
           </div>
-
-          {/* Right side - Desktop nav (hidden on mobile) */}
-          <nav className="hidden md:flex gap-6 text-[#e6f1ff]">
-            <Link href="#about" className="hover:text-[#64ffda] transition-colors">About</Link>
-            <Link href="#skills" className="hover:text-[#64ffda] transition-colors">Skills</Link>
-            <Link href="#projects" className="hover:text-[#64ffda] transition-colors">Projects</Link>
-            <Link href="#contact" className="hover:text-[#64ffda] transition-colors">Contact</Link>
-          </nav>
         </header>
 
-        {/* Main content */}
         <main className="pt-20">
           {children}
         </main>
