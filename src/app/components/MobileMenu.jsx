@@ -17,7 +17,7 @@ export default function MobileMenu() {
       </button>
       
       {isOpen && (
-        <div className="absolute left-0 mt-2 w-48 bg-[#112240] rounded-md shadow-lg z-50">
+          <div className="absolute left-0 mt-2 w-48 bg-[#112240] rounded-md shadow-lg z-50 border border-[#64ffda]/20">
           <Link href="#about" onClick={() => setIsOpen(false)} className="block px-4 py-2 text-[#e6f1ff] hover:bg-[#64ffda]/10">About</Link>
           <Link href="#skills" onClick={() => setIsOpen(false)} className="block px-4 py-2 text-[#e6f1ff] hover:bg-[#64ffda]/10">Skills</Link>
           <Link href="#projects" onClick={() => setIsOpen(false)} className="block px-4 py-2 text-[#e6f1ff] hover:bg-[#64ffda]/10">Projects</Link>

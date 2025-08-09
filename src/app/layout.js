@@ -27,16 +27,19 @@ export default function RootLayout({ children }) {
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {/* Added header with mobile menu */}
         <header className="fixed w-full flex justify-between items-center p-6 z-50 bg-[#0a192f]">
-          <MobileMenu />
+          {/* Left side - Hamburger (mobile only) */}
+         <div className="md:hidden">
+         <MobileMenu />
+         </div>
           
-          {/* Desktop navigation (hidden on mobile) */}
-          <nav className="hidden md:flex gap-6">
-            <Link href="#about" className="text-[#e6f1ff] hover:text-[#64ffda] transition-colors">About</Link>
-            <Link href="#skills" className="text-[#e6f1ff] hover:text-[#64ffda] transition-colors">Skills</Link>
-            <Link href="#projects" className="text-[#e6f1ff] hover:text-[#64ffda] transition-colors">Projects</Link>
-            <Link href="#contact" className="text-[#e6f1ff] hover:text-[#64ffda] transition-colors">Contact</Link>
-          </nav>
-        </header>
+          {/* Right side - Desktop nav (hidden on mobile) */}
+            <nav className="hidden md:flex gap-6">
+            <Link href="#about">About</Link>
+            <Link href="#skills">Skills</Link>
+            <Link href="#projects">Projects</Link>
+            <Link href="#contact">Contact</Link>
+            </nav>
+            </header>
 
         {/* Main content */}
         <main className="pt-20"> {/* Added padding to prevent content hiding under fixed header */}
