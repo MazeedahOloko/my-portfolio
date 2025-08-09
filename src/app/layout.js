@@ -25,20 +25,21 @@ export default function RootLayout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        {/* Header - Only appears ONCE at the top */}
         <header className="fixed w-full flex justify-between items-center p-6 z-50 bg-[#0a192f]">
-          {/* Left side - Only shows name (always visible) */}
+          {/* Left side - Only your name */}
           <div className="text-[#64ffda] font-bold text-xl">
             Mazeedah O
           </div>
 
-          {/* Right side - Desktop nav OR mobile menu (never both) */}
+          {/* Right side - Either desktop nav OR mobile menu (never both) */}
           <div className="flex items-center">
             {/* Desktop Navigation (hidden on mobile) */}
-            <nav className="hidden md:flex gap-6 mr-4">
-              <Link href="#about" className="text-[#e6f1ff] hover:text-[#64ffda] transition-colors">About</Link>
-              <Link href="#skills" className="text-[#e6f1ff] hover:text-[#64ffda] transition-colors">Skills</Link>
-              <Link href="#projects" className="text-[#e6f1ff] hover:text-[#64ffda] transition-colors">Projects</Link>
-              <Link href="#contact" className="text-[#e6f1ff] hover:text-[#64ffda] transition-colors">Contact</Link>
+            <nav className="hidden md:flex gap-6">
+              <Link href="#about" className="text-[#e6f1ff] hover:text-[#64ffda]">About</Link>
+              <Link href="#skills" className="text-[#e6f1ff] hover:text-[#64ffda]">Skills</Link>
+              <Link href="#projects" className="text-[#e6f1ff] hover:text-[#64ffda]">Projects</Link>
+              <Link href="#contact" className="text-[#e6f1ff] hover:text-[#64ffda]">Contact</Link>
             </nav>
 
             {/* Mobile Menu Button (hidden on desktop) */}
@@ -48,6 +49,7 @@ export default function RootLayout({ children }) {
           </div>
         </header>
 
+        {/* Main Content */}
         <main className="pt-20">
           {children}
         </main>
