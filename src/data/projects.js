@@ -33,5 +33,13 @@ export const projects = [
   github: "https://github.com/MazeedahOloko/IMDB-DATA-ANALYSIS", // Add direct GitHub link
   image: "/images/imdb-analysis.jpg" // Optional: add screenshot
 },
+{
+  title: "Wine Review Analysis with Python",
+  description: "Comprehensive analysis of wine reviews dataset exploring patterns in ratings, regions, varieties, and price points using Python data analysis and visualization techniques.",
+  link: "https://github.com/MazeedahOloko/WineReview-Analysis-Using-Python",
+  tech: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Data Cleaning", "EDA", "Data Visualization"],
+  github: "https://github.com/MazeedahOloko/WineReview-Analysis-Using-Python",
+  image: "/images/wine-analysis.jpg" // Optional: add screenshot
+},
   // Add new projects below this line when needed  
 ];
