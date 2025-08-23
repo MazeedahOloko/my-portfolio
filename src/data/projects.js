@@ -41,5 +41,12 @@ export const projects = [
   github: "https://github.com/MazeedahOloko/WineReview-Analysis-Using-Python",
   image: "/images/wine-analysis.jpg" // Optional: add screenshot
 },
+{
+  title: "Online Casino Dashboard Analysis",
+  description: "Comprehensive analysis of online casino performance metrics using interactive dashboard visualization to track user engagement, revenue patterns, and gaming behavior insights.",
+  link: "https://medium.com/@MazeedahO/online-casino-dashboard-analysis-20ca67f04d31",
+  tech: ["Data Visualization", "Dashboard Design", "Business Intelligence", "Metrics Analysis", "Performance Tracking", "Excel/PowerBI"],
+  image: "/images/casino-dashboard.jpg" // Optional: add screenshot
+},
   // Add new projects below this line when needed  
 ];
